@@ -1,0 +1,16 @@
+---
+layout: index
+date: Last Modified
+---
+
+<div class='flex flex-row flex-wrap mx-1'>
+  {% for member in members %}
+    <div class="w-14 h-14 -mx-1 flex items-center justify-center text-2xl 
+    bg-{{ metadata.colors | pickone(member.initials, loop.index0) }}-500 text-gray-200
+    overflow-hidden whitespace-nowrap rounded-full cursor-pointer
+    border-2 border-gray-200 transition-transform hover:-translate-y-1"
+    title="{{ member.name }}">
+      {{ member.initials }}
+    </div>
+  {% endfor %}
+</div>
