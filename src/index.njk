@@ -3,7 +3,7 @@ layout: index
 date: Last Modified
 ---
 
-<div class='grid grid-cols-3 gap-3 mx-1'>
+<div class='grid grid-cols-2 w-full gap-5 mx-1'>
   {% for member in members %}
     <div class="w-full flex flex-row gap-3 items-center">
       <div class="w-14 h-14 flex items-center justify-center text-2xl 
@@ -13,7 +13,10 @@ date: Last Modified
       title="{{ member.name }}">
         {{ member.initials }}
       </div>
-      <p>{{ member.name }}</p>
+      <div>
+        <p>{{ member.name }}</p>
+        <span class="text-gray-100">{{ member.major }}</span>
+      </div>
     </div>
   {% endfor %}
 </div>
