@@ -33,8 +33,8 @@
 		"name": "Mohammed Selmy",
 		"initials": "MS",
 		"major": "computer science"
-  },
-  {
+        },
+        {
 		"name": "Abdulrahman Hanifa",
 		"initials": "AH",
 		"major": "computer science"
@@ -48,11 +48,11 @@
 		"name": "Yousef Irshaid",
 		"initials": "YI",
 		"major": "computer engineering"
-  },
+        },
 	{
 		"name": "Faris Abu Shaqra",
 		"initials": "FS",
-    "major": "computer science"
+                "major": "computer science"
 	},
 	{
 		"name": "Saeed Bin Mizan",
