@@ -23,5 +23,10 @@
 		"name": "Muhammad Hamza",
 		"initials": "MH",
 		"major": "computer engineering"
+	}, 
+	{
+		"name": "Karim Elsayed",
+		"initials": "KE",
+		"major": "computer science"
 	}
 ]
