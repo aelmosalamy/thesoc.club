@@ -78,5 +78,10 @@
 		"name": "Taufiq Syed",
 		"initials": "TS",
 		"major": "computer science"
+	},
+	{
+		"name": "test", 
+		"initials": "do not accept this pull req adham :)", 
+		"major": "ur major"
 	}
 ]
