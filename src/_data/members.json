@@ -73,5 +73,10 @@
 		"name": "Asma Kamali",
 		"initials": "AK",
 		"major": "computer science"
+	},
+	{
+		"name": "Taufiq Syed",
+		"initials": "TS",
+		"major": "computer science"
 	}
 ]
