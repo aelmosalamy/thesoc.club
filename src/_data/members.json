@@ -68,5 +68,10 @@
 		"name": "Hadi Abdallah",
 		"initials": "HA",
 		"major": "computer engineering"
+	},
+	{
+		"name": "Asma Kamali",
+		"initials": "AK",
+		"major": "computer science"
 	}
 ]
