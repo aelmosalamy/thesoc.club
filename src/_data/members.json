@@ -20,10 +20,15 @@
 		"major": "computer engineering"
 	},
 	{
+		"name": "AbdulAziz Mohammad",
+		"initials": "AZ",
+		"major": "computer science/math"
+	}, 
+	{
 		"name": "Muhammad Hamza",
 		"initials": "MH",
 		"major": "computer engineering"
-	}, 
+	},
 	{
 		"name": "Karim Elsayed",
 		"initials": "KE",
