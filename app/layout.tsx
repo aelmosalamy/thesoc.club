@@ -1,7 +1,7 @@
 import React from "react";
 import type {Metadata} from "next";
 
-import "./styles/globals.css";
+import "./styles/globals.scss";
 import {metadataBase} from "./metadata";
 import Navbar from "@/app/navbar";
 
