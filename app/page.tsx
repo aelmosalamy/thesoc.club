@@ -19,7 +19,7 @@ const COLORS = [
 ];
 
 /**
- * Select a deterministically-random color for a given user.
+ * Select a deterministically random color for a given user.
  *
  * @param initials The user's initials.
  * @param index The position of the user in the list.
@@ -40,11 +40,11 @@ export default function Home() {
             <header className="mb-14 max-w-full">
                 This is the official site for the SOC: a cyber security community @ American University of Sharjah 🔐✨
             </header>
-            <div className="self-start w-full grid grid-cols-1 sm:grid-cols-2 gap-5 mx-1 pb-12">
+            <section className="self-start w-full grid grid-cols-1 sm:grid-cols-2 gap-5 mx-1 pb-12">
                 {
                     members.map((member, i) => (
-                        <div className="w-full flex flex-row gap-3 items-center cursor-pointer transition-transform hover:-translate-y-1">
-                            <div title={ member.name } className={`
+                        <div title={ member.name } key={i} className="w-full flex flex-row gap-3 items-center transition-transform hover:-translate-y-1">
+                            <div className={`
                                 w-14 h-14 flex items-center justify-center text-2xl bg-${getRandomColor(member.initials, i)}-500
                                 text-gray-200 overflow-hidden whitespace-nowrap rounded-full border-2 border-gray-200
                             `}>
@@ -57,7 +57,7 @@ export default function Home() {
                         </div>
                     ))
                 }
-            </div>
+            </section>
         </main>
     );
 }
