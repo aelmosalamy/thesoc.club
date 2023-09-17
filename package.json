@@ -2,7 +2,7 @@
   "name": "soc",
   "version": "0.1.0",
   "description": "The main hub for all SOC Club activities.",
-  "repository": "https://github.com/HassanAbouelela/site.git",
+  "repository": "https://github.com/aelmosalamy/thesoc.club.git",
   "private": true,
   "scripts": {
     "dev": "next dev",
