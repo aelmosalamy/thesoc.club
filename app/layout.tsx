@@ -1,9 +1,9 @@
-import React from "react";
 import type {Metadata} from "next";
+import React from "react";
 
 import "./styles/globals.scss";
-import {metadataBase} from "./metadata";
 import Navbar from "@/app/navbar";
+import {metadataBase} from "./metadata";
 
 export const metadata: Metadata = metadataBase;
 

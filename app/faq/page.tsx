@@ -1,6 +1,6 @@
 import {Metadata} from "next";
-import {openGraphBase} from "@/app/metadata";
 
+import {openGraphBase} from "@/app/metadata";
 import Question from "./question";
 
 const metaInfo = {
