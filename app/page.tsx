@@ -1,4 +1,4 @@
-import members from "./members";
+import members from "@/app/members";
 import {toTitleCase} from "@/app/utils";
 
 const COLORS = [
@@ -33,6 +33,7 @@ function getRandomColor(initials: string, index: number): string {
 
     return COLORS[hash % COLORS.length];
 }
+
 
 export default function Home() {
     return (

@@ -1,0 +1,22 @@
+.main {
+    h2 {
+        @apply text-center text-4xl text-white mb-5;
+    }
+
+    h3 {
+        @apply mt-5 mb-2 text-2xl;
+    }
+
+    ul {
+        @apply flex flex-col;
+    }
+
+    ul li {
+        @apply pl-9 -indent-3;
+    }
+
+    ul li::before {
+        content: "- ";
+        @apply w-3 inline-block;
+    }
+}
