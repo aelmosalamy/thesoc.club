@@ -34,6 +34,7 @@ function getRandomColor(initials: string, index: number): string {
     return COLORS[hash % COLORS.length];
 }
 
+
 export default function Home() {
     return (
         <main className="flex-col flex-wrap items-center">
