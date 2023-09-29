@@ -8,17 +8,13 @@ To get started with contributing, you'll need the following:
 
 
 Once all of the above is installed, run `yarn install` in a terminal to install the project's dependencies.
-Additionally, run `docker compose up` to start the Mongo server (if using docker).
+Additionally, create a file called `.env.local` and run `docker compose up` to start the Mongo server (if using docker).
 
 ## Starting Application
 To start the application, run `yarn run dev`. This will start a dev server, most likely at [localhost:3000](http://localhost:3000).
 
-You will need to configure environment variables in a file called `.env.local`.
-The following is enough to get started if using Docker:
-
-```.dotenv
-MONGODB_URI=mongodb://soc:password@localhost:27017/
-```
+If you want to configure your own environment variables, modify `.env.local`.
+If modifying default production or development environment, change `.env.development` and `.env.production`.
 
 ## Project Architecture
 This project uses the latest [Next.js](https://nextjs.org/), with the [app router](https://nextjs.org/docs/app).

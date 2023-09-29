@@ -8,10 +8,13 @@ services:
             MONGO_INITDB_ROOT_PASSWORD: password
             MONGO_INITDB_DATABASE: soc
         env_file:
+            - .env.development
             - .env.local
 
     mongo-express:
         image: mongo-express
+        depends_on:
+            - db
         ports:
             - 8081:8081
         environment:
