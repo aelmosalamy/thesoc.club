@@ -2,6 +2,7 @@ import {Metadata} from "next";
 import Image from "next/image";
 
 import {openGraphBase} from "@/app/metadata";
+import Socials from "@/app/socials";
 import BOARD from "./board";
 import styles from "./style.module.scss";
 
@@ -26,6 +27,17 @@ export default function FAQ() {
             <h1 className="self-center text-4xl text-white mb-10">
                 Security Obsessed Camels Club
             </h1>
+
+            <section>
+                <h2>Who We Are</h2>
+                <p>
+                    The Security Obsessed Camels Club is organized and managed by students.
+                    We are all interested in cyber security, and wish to explore the field.
+                    The club allows students to meet like-minded individuals, share knowledge and experience,
+                    and participate in events to grow their abilities.
+                </p>
+            </section>
+
             <section>
                 <h2>What We Do</h2>
                 <p>
@@ -37,13 +49,8 @@ export default function FAQ() {
             </section>
 
             <section>
-                <h2>Who We Are</h2>
-                <p>
-                    The Security Obsessed Camels Club is organized and managed by students.
-                    We are all interested in cyber security, and wish to explore the field.
-                    The club allows students to meet like-minded individuals, share knowledge and experience,
-                    and participate in events to grow their abilities.
-                </p>
+                <h2>Follow Us</h2>
+                <Socials className={"flex flex-row flex-wrap gap-4"}/>
             </section>
 
             <section>
