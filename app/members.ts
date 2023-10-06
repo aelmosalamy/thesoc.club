@@ -9,7 +9,6 @@ const members: {name: string, initials: string, major: string}[] = [
         initials: "HA",
         major: "computer engineering",
     },
-    
     {
         name: "Omar Safwat",
         initials: "OS",
@@ -76,9 +75,9 @@ const members: {name: string, initials: string, major: string}[] = [
         major: "computer engineering",
     },
     {
-        name: "Mariam Habib" ,
+        name: "Mariam Habib",
         initials: "MA",
-        major: "computer engineering"
+        major: "computer engineering",
     },
     {
         name: "Asma Kamali",
