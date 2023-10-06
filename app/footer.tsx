@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import {BsInstagram} from "react-icons/bs";
+
+import Socials from "@/app/socials";
 
 
 function Section({title, children}: {title: string, children: React.ReactElement}) {
@@ -29,10 +30,7 @@ export default function Footer() {
         </Section>
 
         <Section title={"Links"}>
-            <div className={"flex flex-row gap-2 items-center"}>
-                <BsInstagram size={20}/>
-                <a href={"https://instagram.com/aus_soc"}>aus_soc</a>
-            </div>
+            <Socials className={"flex flex-row flex-wrap gap-4 sm:grid sm:grid-cols-2 sm:gap-y-4"}/>
         </Section>
     </footer>;
 }
