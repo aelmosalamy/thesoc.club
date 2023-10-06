@@ -75,6 +75,11 @@ const members: {name: string, initials: string, major: string}[] = [
         major: "computer engineering",
     },
     {
+        name: "Mariam Habib",
+        initials: "MA",
+        major: "computer engineering",
+    },
+    {
         name: "Asma Kamali",
         initials: "AK",
         major: "computer science",
