@@ -2,7 +2,7 @@ import type {Metadata} from "next";
 import dynamic from "next/dynamic";
 import React from "react";
 
-import "./styles/globals.scss";
+import "@/app/globals.scss";
 import Footer from "@/app/components/footer";
 import Navbar from "@/app/components/navbar";
 import {metadataBase} from "./metadata";

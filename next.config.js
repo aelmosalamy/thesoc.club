@@ -18,7 +18,15 @@ const nextConfig = {
     sassOptions: {
         includePaths: [path.join(__dirname, "app")]
     },
-    
+    images: {
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "*.googleusercontent.com",
+            },
+        ],
+    },
+
     async redirects() {
         return [
             // {

@@ -1,5 +1,5 @@
-import {RiseLoader} from "react-spinners";
+import Loader from "@/app/components/loader";
 
 export default function Loading() {
-    return <RiseLoader color={"white"} aria-label="Loading Spinner" className={"suspense-loader"}/>;
+    return <Loader/>;
 }

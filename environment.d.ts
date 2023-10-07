@@ -31,4 +31,16 @@ declare global {
 }
 /* eslint-enable */
 
+declare module "next-auth" {
+    interface Session {
+        user: {
+            name?: string,
+            email?: string,
+            image?: string,
+            registrationComplete: boolean,
+        }
+        expires: string,
+    }
+}
+
 export {};
