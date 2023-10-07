@@ -54,7 +54,16 @@ module.exports = {
 
         // Layout & Formatting
         "array-bracket-newline": ["error", {"multiline": true}],
-        "indent": ["error", 4, {"SwitchCase": 1}],
+        "indent": ["error", 4, {
+            "SwitchCase": 1,
+            // Don't indent decorators.
+            // Ref: https://github.com/typescript-eslint/typescript-eslint/issues/1824#issuecomment-957559729
+            "ignoredNodes": [
+                "FunctionExpression > .params[decorators.length > 0]",
+                "FunctionExpression > .params > :matches(Decorator, :not(:first-child))",
+                "ClassBody.body > PropertyDefinition[decorators.length > 0] > .key"
+            ]
+        }],
         "quotes": ["error", "double"],
         "semi": ["error", "always"],
         "brace-style": "error",
@@ -73,7 +82,7 @@ module.exports = {
             "alphabetize": {"order": "asc"},
             "pathGroups": [
                 {
-                    "pattern":"@/app/**",
+                    "pattern": "@/app/**",
                     "group": "internal",
                     "position": "before",
                 },

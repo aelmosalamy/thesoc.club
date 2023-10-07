@@ -2,13 +2,17 @@
 To get started with contributing, you'll need the following:
 
 - [nodejs](https://nodejs.org/en) v18+
-- [yarn](https://yarnpkg.com/) (npm install -g yarn)
-- [Docker](https://www.docker.com/products/docker-desktop/)
-  or manually configure [MongoDB](https://www.mongodb.com/try/download/community).
+- [yarn](https://yarnpkg.com/) (`npm install -g yarn`)
+- [Docker](https://www.docker.com/products/docker-desktop/),
+  or manually configure [PostgreSQL](https://www.postgresql.org).
 
 
 Once all of the above is installed, run `yarn install` in a terminal to install the project's dependencies.
-Additionally, create a file called `.env.local` and run `docker compose up` to start the Mongo server (if using docker).
+Create a file called `.env.local` to store your local configuration settings.
+Most settings are preconfigured for you in [.env.development](../.env.development).
+
+Additionally, run `docker compose up -d` to start the Postgres server (if using docker).
+On the first application start, or if the database has been changed, run `yarn run migrate`.
 
 ## Starting Application
 To start the application, run `yarn run dev`. This will start a dev server, most likely at [localhost:3000](http://localhost:3000).
@@ -23,5 +27,6 @@ to familiarize yourself.
 
 
 ## Database
-This project used MongoDB to store data. A simple configuration is available in the included docker compose.
-The database is exposed on port 27017, and an interactive browser at [localhost:8081](http://localhost:8081).
+This project used PostgreSQL (postgres) to store data. A simple configuration is available in the included docker compose.
+The database is exposed on port 10100, and an interactive browser at [localhost:8080](http://localhost:8081).
+We use [Prisma ORM](https://www.prisma.io/) to interact with the database in the application.
