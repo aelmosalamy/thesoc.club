@@ -1,5 +1,6 @@
 "use client";
 
+import * as Sentry from "@sentry/browser";
 import {Session} from "next-auth";
 import {getSession, GetSessionParams} from "next-auth/react";
 import {Dispatch, useEffect, useState} from "react";
@@ -22,9 +23,13 @@ type UseReturn = {
 function update(status: Status, setStatus: Dispatch<Status>, setSession: Dispatch<Session | null>, params?: GetSessionParams) {
     if (status !== Status.LOADING) {
         setStatus(Status.LOADING);
-        void getSession(params).then((s) => {
-            setSession(s);
-            setStatus(s === null ? Status.UNAUTHENTICATED : Status.AUTHENTICATED);
+        void getSession(params).then((session) => {
+            if (session) {
+                Sentry.setUser({username: session.user.name, email: session.user.email});
+            }
+
+            setSession(session);
+            setStatus(session === null ? Status.UNAUTHENTICATED : Status.AUTHENTICATED);
         });
     }
 }

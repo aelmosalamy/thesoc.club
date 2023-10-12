@@ -1,5 +1,6 @@
 import {User} from ".prisma/client";
 import {PrismaAdapter} from "@auth/prisma-adapter";
+import * as Sentry from "@sentry/nextjs";
 import NextAuth, {NextAuthOptions, Session} from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
@@ -43,6 +44,14 @@ export const AUTH_CONFIG: NextAuthOptions = {
     callbacks: {
         // @ts-expect-error TS2322 The default typing for this function gives useless typing information
         session: sessionCallback,
+    },
+    events: {
+        signIn: ({user}) => {
+            Sentry.setUser({id: user.id, email: user.email ?? undefined});
+        },
+        signOut: () => {
+            Sentry.setUser(null);
+        },
     },
 };
 

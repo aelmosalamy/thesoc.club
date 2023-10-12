@@ -1,4 +1,5 @@
 import {Prisma} from "@prisma/client";
+import * as Sentry from "@sentry/nextjs";
 import {NextRequest, NextResponse} from "next/server";
 import {Session} from "next-auth";
 import {ZodError, ZodIssue} from "zod";
@@ -60,7 +61,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<JoinRespo
             message = {"error": ErrorCode.jsonReadError};
         } else {
             // TODO: Integrate some error logging here
-            console.log(e); // eslint-disable-line
+            Sentry.captureException(e);
             return NextResponse.json({"error": ErrorCode.unknownError}, {status: 500});
         }
 
