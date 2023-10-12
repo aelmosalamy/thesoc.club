@@ -27,11 +27,6 @@ if (process.env.SENTRY_DSN) {
         replaysSessionSampleRate: 1,
         replaysOnErrorSampleRate: 1.0,
 
-        integrations: [
-            new Sentry.Replay({
-                maskAllText: false,
-                blockAllMedia: true,
-            }),
-        ],
+        integrations: [],
     });
 }
