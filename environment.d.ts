@@ -16,9 +16,6 @@ declare global {
             // Set by external sources. Should default to prod if unset.
             URL: string;
 
-            // Application configuration
-            POSTGRES_URI: string;
-
             // Sentry configuration
             SENTRY_DSN?: string;
 
