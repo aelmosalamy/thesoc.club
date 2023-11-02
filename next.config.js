@@ -15,6 +15,16 @@ const nextConfig = {
     sassOptions: {
         includePaths: [path.join(__dirname, "app")]
     },
+    
+    async redirects() {
+        return [
+            {
+                source: "/qr",
+                destination: "/",
+                permanent: false,
+            },
+        ];
+    },
 };
 
 module.exports = nextConfig;
