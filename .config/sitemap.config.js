@@ -16,7 +16,6 @@ netlifyRobotPolicies = [{userAgent: "*", disallow: "/"}];
 module.exports = {
     siteUrl: process.env.DEPLOY_URL || process.env.URL || "https://thesoc.club/",
     generateRobotsTxt: true,
-    outDir: "app",
     robotsTxtOptions: {
         policies: process.env.NETLIFY ? netlifyRobotPolicies : robotPolicies,
     }
