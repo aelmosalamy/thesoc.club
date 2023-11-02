@@ -21,7 +21,7 @@ const nextConfig = {
             {
                 source: "/qr",
                 destination: "/",
-                permanent: true,
+                permanent: false,
             },
         ];
     },
