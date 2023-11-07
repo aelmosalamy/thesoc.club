@@ -123,7 +123,7 @@ const members: {name: string, initials: string, major: string}[] = [
         name: "Angelo Cabarloc",
         initials: "AC",
         major: "computer science",
-    }
+    },
 ];
 
 export default members;
