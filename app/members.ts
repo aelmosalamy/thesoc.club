@@ -119,6 +119,11 @@ const members: {name: string, initials: string, major: string}[] = [
         initials: "FN",
         major: "computer engineering",
     },
+    {
+        name: "Angelo Cabarloc",
+        initials: "AC",
+        major: "computer science",
+    }
 ];
 
 export default members;
