@@ -18,11 +18,11 @@ const nextConfig = {
     
     async redirects() {
         return [
-            {
-                source: "/qr",
-                destination: "/",
-                permanent: false,
-            },
+            // {
+            //     source: "/qr",
+            //     destination: "/",
+            //     permanent: false,
+            // },
         ];
     },
 };
