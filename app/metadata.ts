@@ -25,6 +25,6 @@ export const metadataBase: Metadata = {
     title: title,
     description: DESCRIPTION,
     referrer: "origin-when-cross-origin",
-    metadataBase: new URL(process.env.DEPLOY_URL || process.env.URL || "https://thesoc.club/"),
+    metadataBase: new URL(process.env.URL),
     openGraph: openGraphBase,
 };

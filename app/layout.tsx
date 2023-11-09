@@ -2,15 +2,15 @@ import type {Metadata} from "next";
 import dynamic from "next/dynamic";
 import React from "react";
 
-import "./styles/globals.scss";
-import Footer from "@/app/footer";
-import Navbar from "@/app/navbar";
+import "@/app/globals.scss";
+import Footer from "@/app/components/footer";
+import Navbar from "@/app/components/navbar";
 import {metadataBase} from "./metadata";
 
 export const metadata: Metadata = metadataBase;
 
 // Lazy-load sentry's replay plugin to reduce initial client bundle size
-const SentryReplay = dynamic(() => import("./replay"), {ssr: false});
+const SentryReplay = dynamic(() => import("./components/replay"), {ssr: false});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (

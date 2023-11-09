@@ -1,4 +1,4 @@
-import members from "@/app/members";
+import members from "@/app/constants/members";
 import {toTitleCase} from "@/app/utils";
 
 const COLORS = [

@@ -1,8 +1,8 @@
 import {Metadata} from "next";
 import Image from "next/image";
 
+import Socials from "@/app/components/socials";
 import {openGraphBase} from "@/app/metadata";
-import Socials from "@/app/socials";
 import BOARD from "./board";
 import styles from "./style.module.scss";
 

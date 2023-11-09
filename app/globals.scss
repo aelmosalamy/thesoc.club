@@ -2,8 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-*:not(.no-modify) > a[href] {
+*:not(.no-modify) > a[href]:not(.whiteLinks), .link {
     @apply underline text-blue-200 hover:text-blue-400 visited:text-purple-500;
+}
+
+.whiteLinks {
+    @apply text-white underline;
+}
+
+.whiteLinkChildren {
+    a[href] {
+        @apply text-white underline;
+    }
 }
 
 .suspense-loader {

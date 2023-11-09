@@ -1,20 +1,33 @@
 services:
     db:
-        image: mongo:7
+        image: postgres:16-alpine
         ports:
-            - 27017:27017
+            - 10100:5432
         environment:
-            MONGO_INITDB_ROOT_USERNAME: soc
-            MONGO_INITDB_ROOT_PASSWORD: password
-            MONGO_INITDB_DATABASE: soc
-        env_file:
-            - .env.local
+            POSTGRES_USER: soc
+            POSTGRES_PASSWORD: password
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U soc"]
+            interval: 2s
+            timeout: 1s
+            retries: 5
+        volumes:
+            - db-data:/var/lib/postgresql/data
 
-    mongo-express:
-        image: mongo-express
+    pgadmin:
+        image: dpage/pgadmin4
+        depends_on:
+            - db
         ports:
-            - 8081:8081
+            - 8080:80
         environment:
-            ME_CONFIG_MONGODB_URL: mongodb://soc:password@db:27017/
-        env_file:
-            - .env.local
+            PGADMIN_DEFAULT_EMAIL: soc@example.com
+            PGADMIN_DEFAULT_PASSWORD: password
+            PGADMIN_DISABLE_POSTFIX: true
+            PGADMIN_CONFIG_SERVER_MODE: "False"
+            PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
+        volumes:
+            - ./postgres/servers.json:/pgadmin4/servers.json
+
+volumes:
+    db-data:

@@ -12,12 +12,21 @@ const nextConfig = {
         NETLIFY: process.env.NETLIFY || "false",
         BRANCH: process.env.BRANCH || "main",
         PULL_REQUEST: process.env.PULL_REQUEST || "false",
+        URL: process.env.DEPLOY_URL || process.env.URL || "https://thesoc.club/",
         SENTRY_DSN: process.env.SENTRY_DSN,
     },
     sassOptions: {
         includePaths: [path.join(__dirname, "app")]
     },
-    
+    images: {
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "*.googleusercontent.com",
+            },
+        ],
+    },
+
     async redirects() {
         return [
             // {

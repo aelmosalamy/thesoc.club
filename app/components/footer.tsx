@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-import Socials from "@/app/socials";
+import Socials from "@/app/components/socials";
 
 
 function Section({title, children}: {title: string, children: React.ReactElement}) {
