@@ -35,6 +35,11 @@ module.exports = {
         "no-unused-private-class-members": "error",
         "no-use-before-define": "error",
         "require-atomic-updates": "error",
+        "@typescript-eslint/no-misused-promises": ["error", {
+            "checksVoidReturn": {
+                "attributes": false,
+            },
+        }],
 
         // Suggestions
         "camelcase": "error",

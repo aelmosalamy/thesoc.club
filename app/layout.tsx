@@ -1,4 +1,5 @@
 import type {Metadata} from "next";
+import dynamic from "next/dynamic";
 import React from "react";
 
 import "./styles/globals.scss";
@@ -7,6 +8,9 @@ import Navbar from "@/app/navbar";
 import {metadataBase} from "./metadata";
 
 export const metadata: Metadata = metadataBase;
+
+// Lazy-load sentry's replay plugin to reduce initial client bundle size
+const SentryReplay = dynamic(() => import("./replay"), {ssr: false});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
@@ -18,6 +22,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <hr className={"mt-16 mb-8"}/>
                     <Footer/>
                 </div>
+
+                {process.env.SENTRY_DSN ? <SentryReplay/> : null}
             </body>
         </html>
     );
