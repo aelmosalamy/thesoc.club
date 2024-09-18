@@ -42,7 +42,7 @@ export default function FAQ() {
                     <Entry
                         name="Join our whatsapp group"
                         logo={<Whatsapp/>}
-                        url="https://chat.whatsapp.com/Emto7Clhar3I9kDNZIhwVU"
+                        url="https://chat.whatsapp.com/JaGFgjvtDEr8bg0UTAnD5c"
                     />
                     <Entry
                         name="Become a member on engage"
