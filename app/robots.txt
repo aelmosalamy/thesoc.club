@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://thesoc.club/
+
+# Sitemaps
+Sitemap: https://thesoc.club/sitemap.xml
