@@ -47,7 +47,6 @@ export default function Home() {
   const [time, setTime] = useState("");
   const drootRef = useRef();
   const updateTime = () => {
-    // @ts-ignore
     let left = (dateEnd - new Date()) / 1000;
     // let left = (dateEnd - Date.parse("02 Oct 2024 16:00:00 GMT") - count) / 1000;
     setTime(
@@ -75,7 +74,8 @@ export default function Home() {
 
   useEffect(() => {
     const canvas = document.createElement("canvas");
-    canvas.style = "position: absolute; left: 0; top: 0";
+    canvas.style =
+      "position: absolute; width: 100%; height: 100vh; left: 0; top: 0";
 
     if (drootRef.current) {
       drootRef.current.appendChild(canvas);
@@ -101,13 +101,14 @@ export default function Home() {
         className="w-full h-full absolute top-0 left-0 bg-gray-900 flex flex-col flex-wrap justify-center items-center"
       >
         <form
-          className="flex flex-col items-center gap-6 text-2xl z-10"
+          className="flex flex-col items-center gap-6 text-lg sm:text-2xl z-10 w-full py-4 px-2 "
           action={formAction}
         >
-          <p className="text-8xl font-mono font-extrabold">{time}</p>
+          <p className="text-6xl sm:text-8xl font-mono font-extrabold">
+            {time}
+          </p>
           <label
-            style={{ padding: "3rem", width: 1000 }}
-            className="text-center"
+            className="text-center sm:p-8 text-ellipsis whitespace-break-spaces break-before-all w-full"
             htmlFor="decryptionKey"
           >
             The SOC Database has been AES-256 Encrypted.
@@ -121,12 +122,11 @@ export default function Home() {
             3. Contact authorities and you never getting your data back.
             <br />
             <br />
-            Wallet (BTC) Address:
-            8b97bca79750847558d488e2ea4de79903c9c71c9af27ecf1b3dff5dba2abdd9
+            Wallet (BTC) Address: 8b97bca79750847558d488e2ea4de
           </label>
           <p>Decryption Key (Once you pay!):</p>
           <input
-            className="text-green-900 rounded-sm px-8 py-2 text-center text-2xl"
+            className="text-green-900 rounded-sm px-8 py-2 text-center sm:text-2xl"
             id="decryptionKey"
             name="decryptionKey"
             type="text"
