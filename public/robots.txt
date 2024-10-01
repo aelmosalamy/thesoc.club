@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /d3cryp7_1n57ruc710n5.html
