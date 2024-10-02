@@ -47,7 +47,7 @@ export default function Home() {
   const [time, setTime] = useState("");
   const drootRef = useRef();
   const updateTime = () => {
-    let left = (dateEnd - new Date()) / 1000;
+    let left = (dateEnd - new Date() - (4 * 60 * 60 * 1000)) / 1000;
     // let left = (dateEnd - Date.parse("02 Oct 2024 16:00:00 GMT") - count) / 1000;
     setTime(
       `${Math.floor(left / 3600)
